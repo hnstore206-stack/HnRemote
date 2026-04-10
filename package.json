@@ -1,0 +1,28 @@
+{
+  "name": "iremote-unified",
+  "version": "1.0.0",
+  "description": "Unified site for iRemote",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.2",
+    "connect-pg-simple": "^9.0.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "csurf": "^1.11.0",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.2.1",
+    "express-session": "^1.19.0",
+    "fs-extra": "^11.3.4",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.19.0",
+    "serverless-http": "^4.0.0",
+    "session-file-store": "^1.5.0",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3"
+  }
+}
