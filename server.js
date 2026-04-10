@@ -80,7 +80,10 @@ app.post('/api/login', async (req, res) => {
     const user = result.rows[0];
     if (user && await bcrypt.compare(password, user.password)) {
         req.session.user = { username: user.username };
-        res.json({ success: true, redirect: '/dashboard', username: user.username });
+        req.session.save((err) => {
+            if (err) console.error("Session save error:", err);
+            res.json({ success: true, redirect: '/dashboard', username: user.username });
+        });
     } else {
         res.json({ success: false, message: 'خطأ في البيانات' });
     }
